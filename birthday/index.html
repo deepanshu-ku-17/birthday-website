@@ -163,6 +163,15 @@
 
 </body>
 <script>
+
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const audio = document.getElementById("bg-music");
+        audio.muted = false;
+        audio.play().catch(err => console.log("Autoplay blocked:", err));
+      }, 2000); // 2 sec baad unmute
+    });
+
     let datetxt = "02 Sept";
     let datatxtletter = "Madam Ji. You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays Happily. Happy birthday to you.💕";
     let titleLetter = "To you";
